@@ -33,12 +33,9 @@ public class main {
 		
 		//Iterate documents 
         while (cursor.hasNext()) {
-            System.out.println(((DBObject) cursor.next()));
+            //System.out.println(((DBObject) cursor.next()).get("nom")); //one field
+            System.out.println(((DBObject) cursor.next())); //ALL fields
         }
-        
-        		
- 
-	
 	}
 
 }
