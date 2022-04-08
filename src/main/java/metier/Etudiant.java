@@ -1,5 +1,6 @@
 package metier;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Etudiant {
@@ -8,28 +9,24 @@ public class Etudiant {
 	private String nom;
 	private String adresse;
 	private Date dat_nais;
-	private String prog;
-	
-	//constructors
-	public Etudiant(int id, String no_etud, String nom, String adresse, Date dat_nais, String prog) {
+	private ArrayList<Note> notes;
+	public Etudiant(int id, String no_etud, String nom, String adresse, Date dat_nais, ArrayList<Note> notes) {
 		super();
 		this.id = id;
 		this.no_etud = no_etud;
 		this.nom = nom;
 		this.adresse = adresse;
 		this.dat_nais = dat_nais;
-		this.prog = prog;
+		this.notes = notes;
 	}
-	public Etudiant(String no_etud, String nom, String adresse, Date dat_nais, String prog) {
+	public Etudiant(String no_etud, String nom, String adresse, Date dat_nais, ArrayList<Note> notes) {
 		super();
 		this.no_etud = no_etud;
 		this.nom = nom;
 		this.adresse = adresse;
 		this.dat_nais = dat_nais;
-		this.prog = prog;
+		this.notes = notes;
 	}
-	
-	//getters and setters
 	public int getId() {
 		return id;
 	}
@@ -60,12 +57,13 @@ public class Etudiant {
 	public void setDat_nais(Date dat_nais) {
 		this.dat_nais = dat_nais;
 	}
-	public String getProg() {
-		return prog;
+	public ArrayList<Note> getNotes() {
+		return notes;
 	}
-	public void setProg(String prog) {
-		this.prog = prog;
+	public void setNotes(ArrayList<Note> notes) {
+		this.notes = notes;
 	}
+
 	
 	
 
