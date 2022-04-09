@@ -10,10 +10,11 @@ public class DBconnect {
 	
 	public static DB database=null;
 	
+	@SuppressWarnings("deprecation")
 	public DBconnect() {
 		super();
 		MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
-		database = mongoClient.getDB("gescom");
+		database = mongoClient.getDB("scolarite");
 	}
 }
 

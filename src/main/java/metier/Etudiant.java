@@ -8,9 +8,9 @@ public class Etudiant {
 	private String no_etud;
 	private String nom;
 	private String adresse;
-	private Date dat_nais;
+	private String dat_nais;
 	private ArrayList<Note> notes;
-	public Etudiant(int id, String no_etud, String nom, String adresse, Date dat_nais, ArrayList<Note> notes) {
+	public Etudiant(int id, String no_etud, String nom, String adresse, String dat_nais, ArrayList<Note> notes) {
 		super();
 		this.id = id;
 		this.no_etud = no_etud;
@@ -19,13 +19,18 @@ public class Etudiant {
 		this.dat_nais = dat_nais;
 		this.notes = notes;
 	}
-	public Etudiant(String no_etud, String nom, String adresse, Date dat_nais, ArrayList<Note> notes) {
+	public Etudiant(String no_etud, String nom, String adresse, String dat_nais, ArrayList<Note> notes) {
 		super();
 		this.no_etud = no_etud;
 		this.nom = nom;
 		this.adresse = adresse;
 		this.dat_nais = dat_nais;
 		this.notes = notes;
+	}
+	
+	
+	public Etudiant() {
+		super();
 	}
 	public int getId() {
 		return id;
@@ -51,14 +56,19 @@ public class Etudiant {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-	public Date getDat_nais() {
+	public String getDat_nais() {
 		return dat_nais;
 	}
-	public void setDat_nais(Date dat_nais) {
+	public void setDat_nais(String dat_nais) {
 		this.dat_nais = dat_nais;
 	}
 	public ArrayList<Note> getNotes() {
 		return notes;
+	}
+	@Override
+	public String toString() {
+		return "Etudiant [id=" + id + ", no_etud=" + no_etud + ", nom=" + nom + ", adresse=" + adresse + ", dat_nais="
+				+ dat_nais + ", notes=" + notes + "]";
 	}
 	public void setNotes(ArrayList<Note> notes) {
 		this.notes = notes;
